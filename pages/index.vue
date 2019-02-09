@@ -1,72 +1,53 @@
 <template>
-  <section class="container">
-    <div>
-      <logo />
-      <h1 class="title">
-        nuxt-website
-      </h1>
-      <h2 class="subtitle">
-        My classy Nuxt.js project
-      </h2>
-      <div class="links">
-        <a
-          href="https://nuxtjs.org/"
-          target="_blank"
-          class="button--green"
-        >
-          Documentation
-        </a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          class="button--grey"
-        >
-          GitHub
-        </a>
-      </div>
-    </div>
-  </section>
+  <div class="home">
+    <h1>Introduction</h1>
+    <h2>Hello world!</h2>
+
+    <p>
+      Hi, I’m Jake Coffman and I am a developer in St. Louis Missouri.
+    </p>
+
+    <p>
+      I have a Bachelors in Computer Science and have worked professionally in C++, Python, JavaScript,
+      Java, Groovy, Ruby, Go, and C#.
+    </p>
+
+    <h2>Experience</h2>
+    <p>
+      I started out working on low level security libraries and various security related GUIs at Cerner.
+    </p>
+
+    <p>
+      Then I moved on to doing low level network programming on a 3-D distributed simulation of fighter jets
+      at Boeing. I started to pick up web development while I was there, too.
+    </p>
+
+    <p>
+      I then moved to a startup called Appistry where I helped create an ETL system that took HL7 data and
+      transformed it into SQL, and created a search interface. I also did various other "Big Data" web interfaces.
+    </p>
+
+    <p>
+      Now I am at World Wide Technology where I specialize in RESTful API design and
+      UI development with VueJS.
+    </p>
+
+    <h2>Interests</h2>
+    <p>
+      I like game development and have been working on games in my free time. Game development is
+      refreshing and completely unlike web development which I have been doing for my day job. Working in 2D and 3D with physics engines is a fun challenge.
+    </p>
+
+    <p>
+      I also like web development as a way to expose what I do to potentially billions of people.
+    </p>
+  </div>
 </template>
 
 <script>
-import Logo from '~/components/Logo.vue'
 
 export default {
-  components: {
-    Logo
-  }
+  name: 'Home',
+  components: {}
 }
 </script>
-
-<style>
-.container {
-  margin: 0 auto;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-.title {
-  font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
-    'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-  display: block;
-  font-weight: 300;
-  font-size: 100px;
-  color: #35495e;
-  letter-spacing: 1px;
-}
-
-.subtitle {
-  font-weight: 300;
-  font-size: 42px;
-  color: #526488;
-  word-spacing: 5px;
-  padding-bottom: 15px;
-}
-
-.links {
-  padding-top: 15px;
-}
-</style>
