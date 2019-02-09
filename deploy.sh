@@ -4,13 +4,13 @@
 set -e
 
 # build
-npm run build
+npm run generate
 
 # navigate into the build output directory
 cd dist
 
 # if you are deploying to a custom domain
-echo 'www.jakecoffman.com' > CNAME
+echo 'www.jakecoffman.com' > static/CNAME
 
 git init
 git add -A
