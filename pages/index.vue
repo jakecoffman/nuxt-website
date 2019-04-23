@@ -4,7 +4,7 @@
     <h2>Hello world!</h2>
 
     <p>
-      Hi, I’m Jake Coffman and I am a developer in St. Louis Missouri.
+      Hi, I’m Jake Coffman and I am a Software Developer in St. Louis Missouri.
     </p>
 
     <p>
