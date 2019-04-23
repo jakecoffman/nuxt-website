@@ -286,6 +286,7 @@ export default {
     display: flex;
   }
   .project-text {
+    background-color: #f9f9f9;
     padding: 0.5rem;
     display: flex;
     flex-direction: column;
