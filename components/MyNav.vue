@@ -37,5 +37,9 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
+  @import '../scss/_variables';
 
+  .nuxt-link-exact-active {
+    color: $accent;
+  }
 </style>

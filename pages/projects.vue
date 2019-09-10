@@ -161,7 +161,7 @@ export default {
         link: 'http://github.com/jakecoffman/camcontrol',
         image: camcontrol,
         tags: ['C++', 'Qt', 'VLC'],
-        text: `camcontrol is a Qt app with embedded VLC player to open and control multiple Amcrest cameras at once`,
+        text: 'camcontrol is a Qt app with embedded VLC player to open and control multiple Amcrest cameras at once',
 
         links: [{
           href: 'http://github.com/jakecoffman/camcontrol',
@@ -240,13 +240,13 @@ export default {
 </script>
 <style lang="scss">
   @import '../scss/_variables';
-  $roundness: .25rem;
+  $roundness: 5px;
   .cards {
     display: grid;
   }
   .card {
     width: 100%;
-    box-shadow: 2px 2px 2px 2px rgba(0,0,0,0.2);
+    box-shadow:  0 4px 8px 0 rgba(0,0,0,0.2);
     border-radius: $roundness;
     margin-bottom: 1rem;
     display: flex;
@@ -254,8 +254,7 @@ export default {
     justify-content: flex-start;
     align-items: center;
     h2 {
-      margin: .5rem;
-      margin-left: 0;
+      margin: .5rem .5rem .5rem 0;
     }
   }
   @media (min-width: $breakpoint) {
@@ -309,8 +308,7 @@ export default {
     opacity: 1;
   }
   .list-enter, .list-leave-to {
-    transform: translateY(30px);
-    transform: translateX(30px);
+    transform: translateY(30px) translateX(30px);
     opacity: 0;
   }
   .list-leave-active {

@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <header>
-      <span>jakecoffman.com</span>
+      <a href="https://jakecoffman.com">jakecoffman.com</a>
       <div class="grow" />
       <my-nav :mini="true" />
     </header>
@@ -27,12 +27,6 @@
     </main>
 
     <aside />
-
-    <footer>
-      <a href="https://github.com/jakecoffman/jakecoffman.com">
-        Fork me on Github
-      </a>
-    </footer>
   </div>
 </template>
 <script>
