@@ -152,7 +152,7 @@ export default {
   }
 
   h1 {
-    color: $primary;
+    color: $accent;
   }
 
   h2 {

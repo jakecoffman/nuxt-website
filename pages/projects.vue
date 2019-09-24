@@ -26,7 +26,7 @@
 
     <transition-group class="cards" name="list">
       <section v-for="project of filteredProjects" :key="project.title" class="card list-item">
-        <a :href="project.link">
+        <a style="width: 100%" :href="project.link">
           <img class="p-img" :alt="project.title" :src="`${project.image}`">
         </a>
         <div class="project-text">
@@ -39,14 +39,14 @@
           <p class="grow">
             {{ project.text }}
           </p>
-          <ul class="links">
-            <li v-for="link in project.links" :key="link.href">
-              <a :href="link.href" target="_blank">
-                {{ link.name }}
-              </a>
-            </li>
-          </ul>
         </div>
+        <ul class="links">
+          <li v-for="link in project.links" :key="link.href">
+            <a :href="link.href" target="_blank">
+              {{ link.name }}
+            </a>
+          </li>
+        </ul>
       </section>
     </transition-group>
   </article>
@@ -272,7 +272,7 @@ export default {
     width: 100%;
   }
   .badge {
-    background: #2f2eff;
+    background: $accent;
     color: white;
     border-radius: 5px;
     padding: 4px;
@@ -285,7 +285,7 @@ export default {
     display: flex;
   }
   .project-text {
-    background-color: #f9f9f9;
+    background-color: #ffffff;
     padding: 0.5rem;
     display: flex;
     flex-direction: column;
@@ -293,13 +293,19 @@ export default {
     justify-content: space-between;
   }
   .links {
+    border-top: 1px solid #cbcbcb;
+    width: 100%;
     display: flex;
     justify-content: space-evenly;
     list-style: none;
     margin: 0;
-    padding: 0;
+    padding: 1rem 0;
+
     a {
-      color: $primary;
+      color: $accent;
+    }
+    a:hover {
+      color: teal;
     }
   }
 
