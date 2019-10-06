@@ -66,12 +66,12 @@ export default {
     height: 100vh;
   }
 
-  header, footer {
+  header {
     grid-column-start: 1;
     grid-column-end: 3;
 
     display: flex;
-    justify-content: space-between;
+    align-items: center;
     ul {
       display: flex;
       list-style: none;
@@ -85,6 +85,8 @@ export default {
     background: $primary;
     color: white;
     padding: 0.5rem;
+    height: 1.5rem;
+    z-index: 3;
 
     a, a :hover, a :visited {
       text-decoration: none;
