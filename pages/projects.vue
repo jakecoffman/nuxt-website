@@ -118,11 +118,11 @@ export default {
           name: 'Source'
         }]
       }, {
-        title: 'Set Game',
+        title: 'Matchville',
         link: 'https://set.jakecoffman.com',
         image: setgame,
         tags: ['Games', 'Go', 'JavaScript', 'Vuejs'],
-        text: 'Multiplayer web-based version of the Set card game.',
+        text: 'Multi-player web-based version of the Set card game.',
 
         links: [{
           href: 'https://set.jakecoffman.com',
