@@ -63,6 +63,7 @@ import camcontrol from '@/assets/camcontrol.png'
 import arduino from '@/assets/arduino.png'
 import gorunner from '@/assets/gorunner.png'
 import tutorials from '@/assets/tutorials.png'
+import fam from '@/assets/fam.png'
 
 export default {
   data() {
@@ -105,6 +106,17 @@ export default {
           name: 'Download'
         }, {
           href: 'http://github.com/jakecoffman/tanklets',
+          name: 'Source'
+        }]
+      }, {
+        title: 'fam',
+        link: 'https://github.com/jakecoffman/fam',
+        image: fam,
+        tags: ['Games', 'Go'],
+        text: 'Another OpenGL game I am making to play with the kiddos.',
+
+        links: [{
+          href: 'https://github.com/jakecoffman/fam',
           name: 'Source'
         }]
       }, {
