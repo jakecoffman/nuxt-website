@@ -73,7 +73,7 @@ export default {
         title: 'STL Devs',
         link: 'https://stldevs.com',
         image: stldevs,
-        tags: ['Data Warehousing', 'Go', 'Polymer', 'SQL'],
+        tags: ['Data Warehousing', 'Go', 'Vuejs', 'SQL'],
         text: 'This is a site for discovering what open source work developers are doing in the Greater St. Louis region by harvesting public information from Github.',
         links: [{
           href: 'https://stldevs.com',
