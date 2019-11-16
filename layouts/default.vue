@@ -43,10 +43,10 @@ export default {
 
   html, body {
     margin: 0;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
   }
 
   a, a :hover, a :visited {
-    font-weight: bold;
     color: black;
     text-decoration: none;
   }
@@ -56,7 +56,6 @@ export default {
   }
 
   #app {
-    font-family: 'Avenir', Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 
@@ -138,6 +137,7 @@ export default {
     flex-direction: column;
     justify-content: center;
     em {
+      font-style: normal;
       font-weight: bolder;
     }
   }

@@ -12,7 +12,7 @@
     </p>
 
     <transition-group class="cards" name="list">
-      <section v-for="project of projects" :key="project.title" class="card list-item">
+      <section v-for="project of projects" :key="project.title" class="card">
         <a style="width: 100%;" :href="project.link">
           <img class="p-img" :alt="project.title" :src="`${project.image}`">
         </a>
@@ -219,8 +219,6 @@ export default {
     margin-bottom: 1rem;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
     h2 {
       margin: .5rem .5rem .5rem 0;
     }
