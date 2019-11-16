@@ -7,35 +7,17 @@
       these are close enough to be shown off.
     </p>
     <p>
-      There are less complete projects over at my Github: <a href="https://github.com/jakecoffman">
-        https://github.com/jakecoffman
-      </a>
+      There are less complete projects over at my Github:
+      <a href="https://github.com/jakecoffman">https://github.com/jakecoffman</a>
     </p>
 
-    <div v-if="filters.length > 0" class="filters">
-      Active filters:
-      <div class="badges">
-        <button v-for="(tag, index) of filters" :key="index" class="badge" @click="toggleFilter(tag)">
-          {{ tag }}
-        </button>
-        <button v-if="filters.length > 0" class="badge" @click="filters.splice(0, filters.length)">
-          Clear filters
-        </button>
-      </div>
-    </div>
-
     <transition-group class="cards" name="list">
-      <section v-for="project of filteredProjects" :key="project.title" class="card list-item">
-        <a style="width: 100%" :href="project.link">
+      <section v-for="project of projects" :key="project.title" class="card list-item">
+        <a style="width: 100%;" :href="project.link">
           <img class="p-img" :alt="project.title" :src="`${project.image}`">
         </a>
         <div class="project-text">
           <h2>{{ project.title }}</h2>
-          <div class="badges">
-            <button v-for="tag in project.tags" :key="tag" class="badge" @click="toggleFilter(tag)">
-              {{ tag }}
-            </button>
-          </div>
           <p class="grow">
             {{ project.text }}
           </p>
@@ -63,12 +45,11 @@ import camcontrol from '@/assets/camcontrol.png'
 import arduino from '@/assets/arduino.png'
 import gorunner from '@/assets/gorunner.png'
 import tutorials from '@/assets/tutorials.png'
-import fam from '@/assets/fam.png'
+import fam from '@/assets/fam.gif'
 
 export default {
   data() {
     return {
-      filters: [],
       projects: [{
         title: 'STL Devs',
         link: 'https://stldevs.com',
@@ -98,7 +79,7 @@ export default {
         title: 'Tanklets',
         link: 'https://github.com/jakecoffman/tanklets/releases',
         image: tanklets,
-        tags: ['Games', 'Go'],
+        tags: ['Games', 'Go', 'OpenGL'],
         text: 'Same game as Tank Game but written from scratch in Go. I used no game engine, had to learn OpenGL and ported Chipmunk2D for this project.',
 
         links: [{
@@ -112,7 +93,7 @@ export default {
         title: 'fam',
         link: 'https://github.com/jakecoffman/fam',
         image: fam,
-        tags: ['Games', 'Go'],
+        tags: ['Games', 'Go', 'OpenGL'],
         text: 'Another OpenGL game I am making to play with the kiddos.',
 
         links: [{
@@ -134,7 +115,7 @@ export default {
         link: 'https://set.jakecoffman.com',
         image: setgame,
         tags: ['Games', 'Go', 'JavaScript', 'Vuejs'],
-        text: 'Multi-player web-based version of the Set card game.',
+        text: 'Multi-player set finding card game.',
 
         links: [{
           href: 'https://set.jakecoffman.com',
@@ -148,7 +129,7 @@ export default {
         link: 'https://resistance.jakecoffman.com',
         image: resistance,
         tags: ['Games', 'Go', 'JavaScript', 'Vuejs'],
-        text: 'Multiplayer web-based version of The Resistance.',
+        text: 'Multi-player game of intrigue.',
 
         links: [{
           href: 'https://resistance.jakecoffman.com',
@@ -162,8 +143,7 @@ export default {
         link: 'https://github.com/jakecoffman/trusted-friend',
         image: trustedfriend,
         tags: ['Android', 'Java', 'Go', 'gRPC'],
-        text: `Trusted Friend is an Android App that allows you and your closest friends to request
-      each other's locations. You are notified when your location is requested, so it's not creepy.`,
+        text: 'Trusted Friend is no longer in Google Play, but it allowed you to friend people and request their location.',
         links: [{
           href: 'http://github.com/jakecoffman/trusted-friend',
           name: 'Source'
@@ -198,7 +178,7 @@ export default {
         title: 'Gorunner',
         link: 'http://github.com/jakecoffman/gorunner',
         image: gorunner,
-        tags: ['Go'],
+        tags: ['Go', 'Angular'],
         text: `I used to be obsessed with making a better Jenkins. This was an early attempt
       using Go, with AngularJS on the frontend.`,
 
@@ -222,30 +202,6 @@ export default {
           name: 'Go/Angular'
         }]
       }]
-    }
-  },
-  computed: {
-    tags() {
-      const t = new Set()
-      this.projects.forEach(p => t.add(...p.tags))
-      return Array.from(t)
-    },
-    filteredProjects() {
-      if (this.filters.length === 0) {
-        return this.projects
-      }
-      return this.projects.filter(p => p.tags.some(t => this.filters.includes(t)))
-    }
-  },
-  methods: {
-    toggleFilter(tag) {
-      const i = this.filters.indexOf(tag)
-
-      if (i >= 0) {
-        this.filters.splice(i, 1)
-      } else {
-        this.filters.push(tag)
-      }
     }
   }
 }
@@ -283,16 +239,6 @@ export default {
     border-radius: $roundness $roundness 0 0;
     width: 100%;
   }
-  .badge {
-    background: $accent;
-    color: white;
-    border-radius: 5px;
-    padding: 4px;
-    margin: 4px;
-    font-size: small;
-    border: none;
-    cursor: pointer;
-  }
   .project {
     display: flex;
   }
@@ -319,21 +265,5 @@ export default {
     a:hover {
       color: teal;
     }
-  }
-
-  .list-item {
-    transition: all 0.5s;
-    opacity: 1;
-  }
-  .list-enter, .list-leave-to {
-    transform: translateY(30px) translateX(30px);
-    opacity: 0;
-  }
-  .list-leave-active {
-    position: absolute;
-  }
-
-  .filters {
-    padding: 1rem;
   }
 </style>
