@@ -17,12 +17,12 @@
         </nuxt-link>
       </li>
       <li v-if="!mini">
-        <a href="https://twitter.com/nill">
+        <a href="https://twitter.com/nill" target="_blank">
           @nill on Twitter
         </a>
       </li>
       <li v-if="!mini">
-        <a href="https://github.com/jakecoffman">
+        <a href="https://github.com/jakecoffman" target="_blank">
           jakecoffman on Github
         </a>
       </li>
