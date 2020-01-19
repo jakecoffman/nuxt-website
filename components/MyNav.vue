@@ -16,6 +16,11 @@
           Q&A
         </nuxt-link>
       </li>
+      <li>
+        <a href="https://www.jakecoffman.com/blog">
+          Blog
+        </a>
+      </li>
       <li v-if="!mini">
         <a href="https://twitter.com/nill" target="_blank">
           @nill on Twitter
