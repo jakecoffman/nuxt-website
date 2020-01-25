@@ -39,6 +39,7 @@ import tanks from '@/assets/tanks.png'
 import tanklets from '@/assets/tanklets.png'
 import cp from '@/assets/cp.gif'
 import setgame from '@/assets/setgame.png'
+import coloretto from '@/assets/coloretto.png'
 import resistance from '@/assets/resistance.png'
 import trustedfriend from '@/assets/trustedfriend.png'
 import camcontrol from '@/assets/camcontrol.png'
@@ -122,6 +123,21 @@ export default {
           name: 'Play'
         }, {
           href: 'https://github.com/jakecoffman/set-game',
+          name: 'Source'
+        }]
+      }, {
+      }, {
+        title: 'Coloretto',
+        link: 'https://www.jakecoffman.com/coloretto',
+        image: coloretto,
+        tags: ['Games', 'JavaScript', 'Vuejs'],
+        text: 'Multi-player color matching game.',
+
+        links: [{
+          href: 'https://www.jakecoffman.com/coloretto',
+          name: 'Play'
+        }, {
+          href: 'https://github.com/jakecoffman/coloretto',
           name: 'Source'
         }]
       }, {
