@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <header>
-      <a href="https://jakecoffman.com">jakecoffman.com</a>
+      <a class="jakecoffman" href="https://jakecoffman.com">jakecoffman.com</a>
       <div class="grow" />
       <my-nav :mini="true" />
     </header>
@@ -43,7 +43,7 @@ export default {
 
   html, body {
     margin: 0;
-    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+    font-family: Roboto,sans-serif;
   }
 
   a, a :hover, a :visited {
@@ -185,6 +185,10 @@ export default {
 
   .page-enter, .page-leave-active {
     opacity: 0
+  }
+
+  .jakecoffman {
+    margin-left: 1rem;
   }
 
 </style>

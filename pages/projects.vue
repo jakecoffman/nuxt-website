@@ -1,6 +1,6 @@
 <template>
   <article class="projects">
-    <h1>My Projects</h1>
+    <h1>My Personal Projects</h1>
 
     <p>
       This is a small selection of projects that are deployed or in a working state. Software is rarely ever done, but
@@ -81,7 +81,7 @@ export default {
         link: 'https://github.com/jakecoffman/tanklets/releases',
         image: tanklets,
         tags: ['Games', 'Go', 'OpenGL'],
-        text: 'Same game as Tank Game but written from scratch in Go. I used no game engine, had to learn OpenGL and ported Chipmunk2D for this project.',
+        text: 'Another Tank Game but written from scratch in Go. I used no game engine, had to learn OpenGL and ported Chipmunk2D for this project.',
 
         links: [{
           href: 'https://github.com/jakecoffman/tanklets/releases',
@@ -102,7 +102,7 @@ export default {
           name: 'Source'
         }]
       }, {
-        title: 'Chipmunk2D in Go',
+        title: 'Go physics',
         link: 'https://github.com/jakecoffman/cp',
         image: cp,
         tags: ['Games', 'Go'],
@@ -125,7 +125,6 @@ export default {
           href: 'https://github.com/jakecoffman/set-game',
           name: 'Source'
         }]
-      }, {
       }, {
         title: 'Coloretto',
         link: 'https://www.jakecoffman.com/coloretto',
@@ -176,7 +175,6 @@ export default {
           name: 'Source'
         }]
       }, {
-
         title: 'Arduino Security',
         link: 'http://youtu.be/lfOxgK1-5HM',
         image: arduino,
@@ -224,28 +222,32 @@ export default {
 </script>
 <style lang="scss">
   @import '../scss/_variables';
-  $roundness: 5px;
+  $roundness: 4px;
   .cards {
     display: grid;
   }
   .card {
     width: 100%;
-    box-shadow:  0 4px 8px 0 rgba(0,0,0,0.2);
+    box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2),0px 1px 1px 0px rgba(0, 0, 0, 0.14),0px 1px 3px 0px rgba(0,0,0,.12);
     border-radius: $roundness;
     margin-bottom: 1rem;
     display: flex;
     flex-direction: column;
     h2 {
-      margin: .5rem .5rem .5rem 0;
+      margin: 0 0 .25rem;
+    }
+    p {
+      margin: 0;
+      color: #545454;
     }
   }
   @media (min-width: $breakpoint) {
     .cards {
-      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
       grid-gap: 1rem;
     }
     .p-img {
-      height: 300px;
+      height: 200px;
     }
   }
   .p-img {
@@ -257,6 +259,7 @@ export default {
     display: flex;
   }
   .project-text {
+    font-size: 11pt;
     background-color: #ffffff;
     padding: 0.5rem;
     display: flex;
@@ -265,7 +268,8 @@ export default {
     justify-content: space-between;
   }
   .links {
-    border-top: 1px solid #cbcbcb;
+    font-size: 10pt;
+    /*border-top: 1px solid #cbcbcb;*/
     width: 100%;
     display: flex;
     justify-content: space-evenly;
