@@ -24,7 +24,7 @@
         </div>
         <ul class="links">
           <li v-for="link in project.links" :key="link.href">
-            <a :href="link.href" target="_blank">
+            <a :href="link.href" target="_blank" class="btn">
               {{ link.name }}
             </a>
           </li>
@@ -228,7 +228,7 @@ export default {
   }
   .card {
     width: 100%;
-    box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2),0px 1px 1px 0px rgba(0, 0, 0, 0.14),0px 1px 3px 0px rgba(0,0,0,.12);
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
     border-radius: $roundness;
     margin-bottom: 1rem;
     display: flex;
@@ -240,6 +240,10 @@ export default {
       margin: 0;
       color: #545454;
     }
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+  }
+  .card:hover {
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
   }
   @media (min-width: $breakpoint) {
     .cards {
@@ -282,6 +286,14 @@ export default {
     }
     a:hover {
       color: teal;
+    }
+    .btn {
+      border: 1px solid white;
+      border-radius: 3px;
+      padding: .5rem 1.5rem;
+    }
+    .btn:hover {
+      background: rgba(75, 162, 162, 0.07);
     }
   }
 </style>
