@@ -40,6 +40,7 @@ import tanklets from '@/assets/tanklets.png'
 import cp from '@/assets/cp.gif'
 import setgame from '@/assets/setgame.png'
 import coloretto from '@/assets/coloretto.png'
+import memory from '@/assets/memory.png'
 import resistance from '@/assets/resistance.png'
 import trustedfriend from '@/assets/trustedfriend.png'
 import camcontrol from '@/assets/camcontrol.png'
@@ -126,17 +127,31 @@ export default {
           name: 'Source'
         }]
       }, {
-        title: 'Coloretto',
-        link: 'https://www.jakecoffman.com/coloretto',
+        title: 'Colors',
+        link: 'https://www.jakecoffman.com/colors',
         image: coloretto,
         tags: ['Games', 'JavaScript', 'Vuejs'],
         text: 'Multi-player color matching game.',
 
         links: [{
-          href: 'https://www.jakecoffman.com/coloretto',
+          href: 'http://www.jakecoffman.com/colors',
           name: 'Play'
         }, {
-          href: 'https://github.com/jakecoffman/coloretto',
+          href: 'https://github.com/jakecoffman/colors',
+          name: 'Source'
+        }]
+      }, {
+        title: 'Memory',
+        link: 'https://www.jakecoffman.com/memory',
+        image: memory,
+        tags: ['Games', 'JavaScript', 'Svelte'],
+        text: "Kid's game.",
+
+        links: [{
+          href: 'http://www.jakecoffman.com/memory',
+          name: 'Play'
+        }, {
+          href: 'https://github.com/jakecoffman/memory',
           name: 'Source'
         }]
       }, {
