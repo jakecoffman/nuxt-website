@@ -117,7 +117,7 @@ export default {
         link: 'https://set.jakecoffman.com',
         image: setgame,
         tags: ['Games', 'Go', 'JavaScript', 'Vuejs'],
-        text: 'Multi-player set finding card game.',
+        text: 'Online multi-player set finding card game.',
 
         links: [{
           href: 'https://set.jakecoffman.com',
@@ -131,7 +131,7 @@ export default {
         link: 'https://www.jakecoffman.com/colors',
         image: coloretto,
         tags: ['Games', 'JavaScript', 'Vuejs'],
-        text: 'Multi-player color matching game.',
+        text: 'Local multi-player color matching game.',
 
         links: [{
           href: 'http://www.jakecoffman.com/colors',
@@ -145,7 +145,7 @@ export default {
         link: 'https://www.jakecoffman.com/memory',
         image: memory,
         tags: ['Games', 'JavaScript', 'Svelte'],
-        text: "Kid's game.",
+        text: "Local multi-player kid's game.",
 
         links: [{
           href: 'http://www.jakecoffman.com/memory',
@@ -155,7 +155,7 @@ export default {
           name: 'Source'
         }]
       }, {
-        title: 'Resistance',
+        title: 'Spy Game',
         link: 'https://resistance.jakecoffman.com',
         image: resistance,
         tags: ['Games', 'Go', 'JavaScript', 'Vuejs'],
