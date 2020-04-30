@@ -249,7 +249,7 @@ export default {
     display: flex;
     flex-direction: column;
     h2 {
-      margin: 0 0 .25rem;
+      margin: .5rem 0 1rem;
     }
     p {
       margin: 0;
@@ -262,7 +262,7 @@ export default {
   }
   @media (min-width: $breakpoint) {
     .cards {
-      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
       grid-gap: 1rem;
     }
     .p-img {
